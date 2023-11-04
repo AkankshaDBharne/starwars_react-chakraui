@@ -21,5 +21,6 @@ This project is a ReactJS web application implemented with Chakra UI, allowing u
 
 **Deployment**
 This application is deployed using Vercel hosting platform. 
-**Link:**
+
+**Link:** https://react-chakraui-starwars.vercel.app/
 
