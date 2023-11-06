@@ -33,7 +33,7 @@ const CharactersList = () => {
 
   return (
     <VStack p={4} m={2} color="white" w="100%">
-      <Text pb={3} fontSize={{ base: '24px', md: '28px' }} textAlign="center">
+      <Text as='b' pb={3} fontSize={{ base: '24px', md: '28px' }} textAlign="center">
         Star War Characters
       </Text>
 

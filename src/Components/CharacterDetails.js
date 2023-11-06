@@ -1,5 +1,5 @@
-import { Box,Text,ListItem, UnorderedList, Icon, Flex, Button, Input } from '@chakra-ui/react';
-import React, {  useState } from 'react';
+import { Box,Text,ListItem, UnorderedList, Icon, Flex, Button, Input, Image } from '@chakra-ui/react';
+import  {  useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import useCharacterDetails from '../Hooks/useCharacterDetails';
 import{FaCar,FaSpaceShuttle} from 'react-icons/fa';
@@ -47,18 +47,24 @@ const CharacterDetails = () => {
           character ? ( 
            <Box borderWidth="1px" bg="black" bgOpacity={0.8} borderRadius="lg" overflow="hidden" p={2} m={{base:'0',md:'20'}} alignContent={"center"}  textColor={"white"}>
              <Box ml={6}>
-                <Text mt={2} fontSize={{ base: '24px', md: '28px' }} pb={2} color="white" textAlign="center">
+                <Text  mt={2} fontSize={{ base: '24px', md: '28px' }} pb={2} color="white" textAlign="center">
                     {character.name}
                 </Text>
-                <Box fontSize={{ base: '16px', md: '18px' }}>
-                    <Text>Height: {character.height}</Text>
-                    <Text>Mass: {character.mass}</Text>
-                    <Text>Birth Year: {character.birth_year}</Text>
-                    <Text>Gender: {character.gender}</Text>
-                    <Text> Hair_Color: {character.hair_color}</Text>
-                    <Text>Skin_Color:{character.skin_color}</Text>     
-                    <Text>Eye_Color: {character.eye_color}</Text>
-                </Box>
+
+                <Flex  m="auto" p={4}>
+                    <Flex direction="column">
+                        <Image src={`/assets/characters/${id}.jpg`} boxSize={{base:'200px',md:'220px'}} m="auto" alignContent="center" alt={character.name} />
+                    </Flex>
+                    <Box fontSize={{ base: '16px', md: '18px' }} ml={{base:'8',md:'16'}}>
+                        <Text>Height: {character.height}</Text>
+                        <Text>Mass: {character.mass}</Text>
+                        <Text>Birth Year: {character.birth_year}</Text>
+                        <Text>Gender: {character.gender}</Text>
+                        <Text> Hair_Color: {character.hair_color}</Text>
+                        <Text>Skin_Color:{character.skin_color}</Text>     
+                        <Text>Eye_Color: {character.eye_color}</Text>
+                    </Box>
+                </Flex>
              </Box>
 
                 <Text mt={6} ml={6} fontSize={{ base: '20px', md: '22px' }}> 
